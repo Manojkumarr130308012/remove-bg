@@ -13,7 +13,9 @@ const upload = multer({ dest: 'images/' });
 
 async function removeImageBackground(imgSource) {
   try {
+    console.log("testing",imgSource);
       const blob = await removeBackground(imgSource);
+      console.log("testing","testing1");
       const buffer = Buffer.from(await blob.arrayBuffer());      
       return buffer;
   } catch (error) {
