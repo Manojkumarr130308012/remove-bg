@@ -26,7 +26,6 @@ server.post('/remove_background', upload.single('image'), async (req, res) => {
       res.status(400).send('No file uploaded.');
       return;
   }
-  
   const resultDataURL = await removeImageBackground(req.file.path);
   res.contentType('image/png');
   res.send(resultDataURL);
