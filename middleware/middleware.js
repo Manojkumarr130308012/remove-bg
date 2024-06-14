@@ -31,4 +31,8 @@ server.post('/remove_background', upload.single('image'), async (req, res) => {
   res.send(resultDataURL);
 });
 
+server.get('/', async (req, res) => {
+  res.send(await addressController.getDefalutAddress(req.body));
+});
+
 module.exports= server;
