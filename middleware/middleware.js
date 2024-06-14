@@ -9,7 +9,7 @@ const { removeBackground } = require('@imgly/background-removal-node');
 
 server.use(cors());
 
-const upload = multer();
+const upload = multer({ dest: 'images/' });
 
 async function removeImageBackground(imgSource) {
   try {
@@ -26,7 +26,7 @@ server.post('/remove_background', upload.single('image'), async (req, res) => {
       res.status(400).send('No file uploaded.');
       return;
   }
-  const resultDataURL = await removeImageBackground("https://i.sstatic.net/GsDIl.jpg");
+  const resultDataURL = await removeImageBackground(req.file.path);
   res.contentType('image/png');
   res.send(resultDataURL);
 });
