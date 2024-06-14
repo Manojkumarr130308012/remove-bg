@@ -32,7 +32,7 @@ server.post('/remove_background', upload.single('image'), async (req, res) => {
 });
 
 server.get('/', async (req, res) => {
-  res.send(await addressController.getDefalutAddress(req.body));
+  res.send("testing");
 });
 
 module.exports= server;
