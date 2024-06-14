@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@imgly/background-removal-node": "^1.4.5",
     "@masuhajime/background-removal-node": "^1.4.4",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
