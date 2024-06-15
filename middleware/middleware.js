@@ -4,7 +4,7 @@ const bodyParser=require('body-parser');
 const multer = require('multer');
 server.use(bodyParser.json());
 const cors = require('cors');
-const { removeBackground } = require('@masuhajime/background-removal-node');
+const { removeBackground } = require('@imgly/background-removal-node');
 
 server.use(cors());
 
