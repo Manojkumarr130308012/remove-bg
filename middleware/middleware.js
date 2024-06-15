@@ -6,7 +6,6 @@ server.use(bodyParser.json());
 const cors = require('cors');
 const { removeBackground } = require('@masuhajime/background-removal-node');
 
-
 server.use(cors());
 
 const upload = multer({ dest: 'images/' });
@@ -34,5 +33,6 @@ server.post('/remove_background', upload.single('image'), async (req, res) => {
 server.get('/', async (req, res) => {
   res.send("testing");
 });
+
 
 module.exports= server;
